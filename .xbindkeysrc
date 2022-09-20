@@ -1,0 +1,38 @@
+###########################
+# xbindkeys configuration #
+###########################
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+
+# Increase volume
+".local/bin/changevolume up"
+   XF86AudioRaiseVolume
+
+# Decrease volume
+".local/bin/changevolume down"
+   XF86AudioLowerVolume
+
+# Mute volume
+".local/bin/changevolume mute"
+   XF86AudioMute
+
+# Mute microphone
+"amixer set Capture 1+ toggle"
+   XF86AudioMicMute
+
+# Increase Brightness
+".local/bin/changebrightness up"
+   XF86MonBrightnessUp
+
+".local/bin/changebrightness down"
+   XF86MonBrightnessDown
