@@ -1,5 +1,15 @@
 #!/bin/bash
 
+##########################
+# Change Volume in linux # 
+##########################
+# * Written for arch	 #
+# * Using Pipewire		 #
+# * Depends on			 #
+#   * dunst				 #
+#   * amixer			 #	
+##########################
+
 function send_notification() {
 	volume=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
 	dunstify -a "changevolume" -u low -r "9993" -h int:value:"$volume" -i "volume-$1" "Volume: ${volume}%" -t 2000

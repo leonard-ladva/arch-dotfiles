@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#######################################
+# Change Display Brightntess in linux # 
+#######################################
+# * Written for arch	 			  #
+# * Depends on			 			  #
+#   * brillo				 		  #
+#######################################
+
 function send_notification() {
 	brightness=$(brillo)
 	dunstify -a "changebrightness" -u low -r "9993" -h int:value:"$brightness" -i "brightness-$1" "Brightness: ${brightness}%" -t 2000
