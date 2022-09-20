@@ -1,0 +1,38 @@
+#!/bin/bash
+
+function send_notification() {
+	volume=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
+	dunstify -a "changevolume" -u low -r "9993" -h int:value:"$volume" -i "volume-$1" "Volume: ${volume}%" -t 2000
+}
+
+function is_muted() {
+	sound_status=$(awk -F"[][]" '/Left:/ { print $4 }' <(amixer sget Master))
+	if [[ $sound_status == "off" ]]
+	then 
+		return 1
+	else
+		return 0
+	fi
+}
+
+case $1 in
+up)
+	amixer set Master unmute 
+	amixer set Master 5%+
+	send_notification $1
+	;;
+down)
+	amixer set Master unmute
+	amixer set Master 5%-
+	send_notification $1
+	;;
+mute)
+	#pamixer -t
+	amixer set Master +1 toggle
+	if is_muted; then
+		dunstify -i volume-mute -a "changevolume" -t 2000 -r 9993 -u low "Muted"
+	else
+		send_notification up
+	fi
+	;;
+esac
