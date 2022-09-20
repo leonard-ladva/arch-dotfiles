@@ -1,0 +1,7 @@
+[user]
+	email = leonard.ladva@gmail.com
+	name = Leonard Ladva
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
