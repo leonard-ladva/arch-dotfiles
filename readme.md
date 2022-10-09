@@ -3,3 +3,4 @@
 * VM: bspwm
 * bar: polybar
 * audio: pulseaudio
+* notification: dunst
