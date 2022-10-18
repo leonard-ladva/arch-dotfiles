@@ -4,3 +4,6 @@
 * bar: polybar
 * audio: pulseaudio
 * notification: dunst
+
+## Inspiration
+[Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
