@@ -1,6 +1,6 @@
 # All arch linux dotfiles that I currently use
 
-* VM: bspwm
+* WM: bspwm
 * bar: polybar
 * audio: pulseaudio
 * notification: dunst
