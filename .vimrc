@@ -48,4 +48,3 @@ set wildmenu
 
 " Make wildmenu behave similar to Bash completion.
 set wildmode=list:longest
-
