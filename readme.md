@@ -6,6 +6,7 @@
 | bar | polybar |
 | audio | pulseaudio |
 | notification | dunst |
+| bluetooth | bluez |
 
 ## Inspiration
 [Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
