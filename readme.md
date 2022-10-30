@@ -11,4 +11,4 @@
 ## Inspiration
 [Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
 ## Dotfiles repo base
-[Tutorial](https://www.atlassian.com/git/tutorials/dotfiles)
+[Bare Git Repo Dotifles](https://www.atlassian.com/git/tutorials/dotfiles)
