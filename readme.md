@@ -1,4 +1,4 @@
-# All arch linux dotfiles that I currently use
+# Current Arch Linux setup configuration files
 
 | feature | software |
 |:---|:---:|
