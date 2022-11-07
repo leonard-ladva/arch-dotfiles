@@ -1,7 +1,7 @@
 # Current Arch Linux setup configuration files
 
 | feature | software |
-|:---|:---:|
+|:---|:---|
 | WM | bspwm |
 | bar | polybar |
 | audio | pulseaudio |
