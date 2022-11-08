@@ -1,4 +1,4 @@
-# Current Arch Linux setup configuration files
+# Current Arch Linux configuration files
 
 | feature | software |
 |:---|:---|
@@ -9,5 +9,5 @@
 | bluetooth | bluez |
 
 ## References that helped me
-[Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
-[Storing Dotfiles in a Bare Git Repo](https://www.atlassian.com/git/tutorials/dotfiles)
+- [Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
+- [Storing Dotfiles in a Bare Git Repo](https://www.atlassian.com/git/tutorials/dotfiles)
