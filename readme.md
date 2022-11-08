@@ -8,7 +8,6 @@
 | notification | dunst |
 | bluetooth | bluez |
 
-## Inspiration
+## References that helped me
 [Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
-## Dotfiles repo base
-[Bare Git Repo Dotifles](https://www.atlassian.com/git/tutorials/dotfiles)
+[Storing Dotfiles in a Bare Git Repo](https://www.atlassian.com/git/tutorials/dotfiles)
