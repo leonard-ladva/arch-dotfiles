@@ -1,4 +1,4 @@
-# Current Arch Linux setup configuration files
+# Current Arch Linux configuration files
 
 | feature | software |
 |:---|:---|
@@ -8,7 +8,6 @@
 | notification | dunst |
 | bluetooth | bluez |
 
-## Inspiration
-[Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
-## Dotfiles repo base
-[Bare Git Repo Dotifles](https://www.atlassian.com/git/tutorials/dotfiles)
+## References that helped me
+- [Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
+- [Storing Dotfiles in a Bare Git Repo](https://www.atlassian.com/git/tutorials/dotfiles)
