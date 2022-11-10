@@ -17,3 +17,8 @@ alias gc='git commit'
 # View the Git log.
 alias gl='git log --oneline'
 
+# Start Obsidian Appimage
+alias obs="
+cd ~/appimages
+./obsidian.AppImage
+"
