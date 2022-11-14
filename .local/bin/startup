@@ -1,10 +1,10 @@
 #! /bin/sh
 
 internal_monitor=eDP-1
-external_monitor=HDMI-1
+external_monitor=DP-3-8
 
 monitor_add() {
-	desktops=3 # How many desktops to move to the second monitor
+	desktops=6 # How many desktops to move to the second monitor
 
 	for desktop in $(bspc query -D -m $internal_monitor | sed "$desktops"q)
   do
