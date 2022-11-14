@@ -1,15 +1,15 @@
 #! /bin/sh
 
-if [ -x $HOME/bin/own_script_bspwm_laptop_dual_monitor ];then
-    own_script_bspwm_laptop_dual_monitor
-fi
+# if [ -x $HOME/bin/own_script_bspwm_laptop_dual_monitor ];then
+#     own_script_bspwm_laptop_dual_monitor
+# fi
 
 bspc monitor eDP-1 -d 1 2 3 4 5 6 &
 pggrep -x sxhkd >/dev/null || sxhkd &
 $HOME/.local/bin/startup
 
 bspc config border_width 0 
-bspc config window_gap 12
+bspc config window_gap 11
 # bspc config top_padding 0
 # bspc config left_padding 0
 # bspc config right_padding 0
