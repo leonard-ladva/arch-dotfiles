@@ -1,4 +1,3 @@
 #! /bin/sh
 
-dunstify -a "hello" "This Works"
-# $HOME/.local/bin/startup
+$HOME/.local/bin/startup
