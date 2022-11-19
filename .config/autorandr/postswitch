@@ -1,3 +1,70 @@
 #! /bin/sh
 
-$HOME/.local/bin/startup
+desktops=3 # How many desktops to move to the second monitor
+
+connect_double_external() {
+	bspc monitor $INT_MONITOR -a Desktop
+
+	# Second External
+	for desktop in $(bspc query -D -m $INT_MONITOR | sed "$desktops"q)
+  	do
+		bspc desktop $desktop --to-monitor $SECOND_EXT_MONITOR
+  	done
+	
+	# First External
+  	for desktop in $(bspc query -D -m $INT_MONITOR | sed "$desktops"q)
+  	do
+		bspc desktop $desktop --to-monitor $EXT_MONITOR
+  	done
+
+  	bspc monitor $EXT_MONITOR --reorder-desktops 4 5 6
+  	bspc monitor $SECOND_EXT_MONITOR --reorder-desktops 1 2 3
+
+  	bspc monitor $INT_MONITOR --remove
+  	bspc desktop Desktop --remove
+}
+
+connect_external() {
+	for desktop in $(bspc query -D -m $INT_MONITOR | sed "$desktops"q)
+  	do
+		bspc desktop $desktop --to-monitor $EXT_MONITOR
+  	done
+	
+	bspc monitor $EXT_MONITOR --reorder-desktops 1 2 3
+  	bspc desktop Desktop --remove
+}
+
+remove_external() {
+	# Second External
+	bspc monitor $SECOND_EXT_MONITOR -a Desktop
+	for desktop in $(bspc query -D -m $SECOND_EXT_MONITOR)
+	do
+		bspc desktop $desktop --to-monitor $INT_MONITOR
+	done
+
+
+	# First External
+	bspc monitor $EXT_MONITOR -a Desktop
+	for desktop in $(bspc query -D -m $EXT_MONITOR)
+	do
+		bspc desktop $desktop --to-monitor $INT_MONITOR
+	done
+
+	bspc monitor $EXT_MONITOR --remove
+	bspc monitor $SECOND_EXT_MONITOR --remove
+
+	bspc desktop Desktop --remove
+  	bspc monitor $INT_MONITOR --reorder-desktops 1 2 3 4 5 6
+}
+
+if [[ $(autorandr | grep "sillamae (detected)") ]]; then
+	connect_double_external
+
+elif [[ $(autorandr | grep "home (detected)") ]]; then
+	connect_external
+else
+	remove_external
+fi
+
+xwallpaper --zoom ~/.config/wall.png
+$HOME/.config/polybar/launch.sh
