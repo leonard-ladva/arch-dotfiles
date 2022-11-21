@@ -21,4 +21,5 @@ alias gl='git log --oneline'
 alias obs="
 cd ~/appimages
 ./obsidian.AppImage
+cd ~
 "
