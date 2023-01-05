@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/leo/.config/sxhkd'
+let g:netrw_dirhist_5='/usr/local/bin'
+let g:netrw_dirhist_4='/home/leo/.config/sxhkd'
+let g:netrw_dirhist_3='/home/leo/.local'
+let g:netrw_dirhist_2='/home/leo/.config/autorandr/external'
+let g:netrw_dirhist_1='/home/leo/.mozilla/firefox/ybh2mke6.default-release/chrome'
+let g:netrw_dirhist_0='/home/leo/.config/autorandr/home'
+let g:netrw_dirhist_9='/home/leo/.vim'
+let g:netrw_dirhist_8='/home/leo/.config/bspwm'
+let g:netrw_dirhist_7='/home/leo/.config/sxhkd'

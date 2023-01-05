@@ -1,50 +1,49 @@
-" Disable compatibility with vi which can cause unexpected issues.
+" VIM Plug
+call plug#begin()
+"" Theme
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+call plug#end()
+
+
 set nocompatible
-
-" Enable type file detection.
 filetype on
-
-" Enable plugins and load plugin for the detected file type.
 filetype plugin on
-
-" Load an indent file for the detected file type.
 filetype indent on
 
-"Syntax highlighting.
 syntax on
-
-" Line Numbers.
 set number relativenumber
 
 " Highlight cursor position.
 set cursorline
 
-" Shift width.
+set expandtab
 set shiftwidth=4
-
-" Tab width.
+set softtabstop=4
 set tabstop=4
+set autoindent
 
-" Set capital insensitive search.
+
 set ignorecase
-
-" Set capital sensitive search if using capital letters.
 set smartcase
 
 " Show partial command
 set showcmd
-
-" Show mode on last line
 set showmode
-
-" Show matches
 set showmatch
 
-" Highlight when searching
 set hlsearch
 
-" Enable auto completion on TAB
 set wildmenu
 
 " Make wildmenu behave similar to Bash completion.
 set wildmode=list:longest
+
+set textwidth=80
+
+" Styling
+colorscheme onehalfdark
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
