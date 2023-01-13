@@ -59,7 +59,6 @@ remove_external() {
 
 if [[ $(autorandr | grep "sillamae (detected)") ]]; then
 	connect_double_external
-
 elif [[ $(autorandr | grep "home (detected)") ]]; then
 	connect_external
 else
