@@ -7,6 +7,7 @@
 | audio | pulseaudio |
 | notification | dunst |
 | bluetooth | bluez |
+| network manager | network-manager |
 
 ## References that helped me
 - [Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
