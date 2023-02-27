@@ -16,3 +16,4 @@
 - Desktops don't change monitors correctly when connecting/disconnecting a monitor. 
 - Autorandr doesn't run on monitor connect but does on disconnect.
 - Can't control bluetooth devices volume with volume buttons
+    - Volume on bluetooth speaker can excede 100% when using volume buttons
