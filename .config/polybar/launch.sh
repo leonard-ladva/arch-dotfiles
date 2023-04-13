@@ -14,8 +14,13 @@ if [[ $(autorandr | grep 'sillamae (detected)') || $(autorandr | grep 'sillamae 
 	exit
 fi
 
-if [[ $(autorandr | grep 'home (detected)') ]]; then
-	polybar external &
-fi
+#if [[ $(autorandr | grep 'home (detected)') ]]; then
+#	polybar external &
+#fi
 
-polybar laptop
+#polybar laptop
+
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$m polybar --reload laptop &
+done
+

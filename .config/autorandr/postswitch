@@ -65,5 +65,5 @@ else
 	remove_external
 fi
 
-xwallpaper --zoom ~/.config/wall.png
+xwallpaper --zoom ~/.config/wall.jpg
 $HOME/.config/polybar/launch.sh
