@@ -6,6 +6,7 @@
 # * Written for arch	 			  #
 # * Depends on			 			  #
 #   * brillo				 		  #
+#   * dunst
 #######################################
 
 function send_notification() {
