@@ -1,0 +1,6 @@
+/* Hide tabs toolbar */
+#TabsToolbar { visibility: collapse !important;}
+/* Hide sidebar title */
+#sidebar-box #sidebar-header {
+	display: none !important;
+  }

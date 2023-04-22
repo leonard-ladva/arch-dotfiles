@@ -57,13 +57,14 @@ remove_external() {
   	bspc monitor $INT_MONITOR --reorder-desktops 1 2 3 4 5 6
 }
 
-if [[ $(autorandr | grep "sillamae (detected)") ]]; then
-	connect_double_external
-elif [[ $(autorandr | grep "home (detected)") ]]; then
+#if [[ $(autorandr | grep "sillamae (detected)") ]]; then
+#	connect_double_external
+#el
+if [[ $(autorandr | grep "home (detected)") ]]; then
 	connect_external
 else
 	remove_external
 fi
 
-xwallpaper --zoom ~/.config/wall.jpg
+xwallpaper --zoom ~/.config/wall.png
 $HOME/.config/polybar/launch.sh

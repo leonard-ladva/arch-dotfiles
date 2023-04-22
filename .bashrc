@@ -31,3 +31,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 export $(dbus-launch)
 
+# Monitors
+export INT_MONITOR=eDP-1
+export EXT_MONITOR=DP-3-8
+export MONITOR=$INT_MONITOR
+
