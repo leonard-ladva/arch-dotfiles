@@ -3,7 +3,6 @@ call plug#begin()
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
 
-
 set nocompatible
 filetype on
 filetype plugin on
@@ -50,3 +49,6 @@ if exists('+termguicolors')
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
 endif
+
+" Make system clipboard the main vim registrar
+set clipboard=unnamedplus
