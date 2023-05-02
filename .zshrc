@@ -48,11 +48,10 @@ export CHROME_EXECUTABLE=/usr/bin/chromium
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-export $(dbus-launch)
 
 # Monitors
 export INT_MONITOR=eDP-1
-export EXT_MONITOR=DP-3
+export EXT_MONITOR=DP-3-8
 export MONITOR=$INT_MONITOR
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
@@ -62,3 +61,4 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 #  
 export PATH=$PATH:'/home/leo/.local/bin'
+export BROWSER=firefox
