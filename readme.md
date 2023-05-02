@@ -13,7 +13,5 @@
 - [Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
 - [Storing Dotfiles in a Bare Git Repo](https://www.atlassian.com/git/tutorials/dotfiles)
 ## Problems
-- Desktops don't change monitors correctly when connecting/disconnecting a monitor. 
-- Autorandr doesn't run on monitor connect but does on disconnect.
-- Can't control bluetooth devices volume with volume buttons
-    - Volume on bluetooth speaker can excede 100% when using volume buttons
+- [ ] Desktops don't change monitors correctly when connecting/disconnecting a monitor. 
+- [ ] Autorandr doesn't run on monitor connect but does on disconnect.
