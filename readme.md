@@ -1,13 +1,13 @@
 # Current Arch Linux configuration files
 
-| feature | software |
+|feature            |software   |
 |:---|:---|
-| WM | bspwm |
-| bar | polybar |
-| audio | pulseaudio |
-| notification | dunst |
-| bluetooth | bluez |
-| network manager | network-manager |
+|WM                 |bspwm      |
+|bar                |polybar    |
+|audio              |pulseaudio |
+|notification       |dunst      |
+|bluetooth          |bluez      |
+|network manager    |iwd        |
 
 ## References that helped me
 - [Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
