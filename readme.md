@@ -1,5 +1,6 @@
 # Current Arch Linux configuration files
 
+## What I use
 |feature            |software   |
 |:---|:---|
 |WM                 |bspwm      |
@@ -8,6 +9,7 @@
 |notification       |dunst      |
 |bluetooth          |bluez      |
 |network manager    |iwd        |
+
 
 ## References that helped me
 - [Eric Murphy](https://github.com/ericmurphyxyz/dotfiles)
