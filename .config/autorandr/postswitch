@@ -2,69 +2,38 @@
 
 desktops=3 # How many desktops to move to the second monitor
 
-connect_double_external() {
-	bspc monitor $INT_MONITOR -a Desktop
-
-	# Second External
-	for desktop in $(bspc query -D -m $INT_MONITOR | sed "$desktops"q)
-  	do
-		bspc desktop $desktop --to-monitor $SECOND_EXT_MONITOR
-  	done
-	
-	# First External
-  	for desktop in $(bspc query -D -m $INT_MONITOR | sed "$desktops"q)
+monitor_add() {
+	for desktop in $(bspc query -D -m $INT_MONITOR | sed "$desktops"q);
   	do
 		bspc desktop $desktop --to-monitor $EXT_MONITOR
   	done
-
-  	bspc monitor $EXT_MONITOR --reorder-desktops 4 5 6
-  	bspc monitor $SECOND_EXT_MONITOR --reorder-desktops 1 2 3
-
-  	bspc monitor $INT_MONITOR --remove
+	
   	bspc desktop Desktop --remove
-}
-
-connect_external() {
-	for desktop in $(bspc query -D -m $INT_MONITOR | sed "$desktops"q)
-  	do
-		bspc desktop $desktop --to-monitor $EXT_MONITOR
-  	done
-	
 	bspc monitor $EXT_MONITOR --reorder-desktops 1 2 3
-  	bspc desktop Desktop --remove
+    bspc wm -O $EXT_MONITOR $INT_MONITOR
 }
 
-remove_external() {
-	# Second External
-	bspc monitor $SECOND_EXT_MONITOR -a Desktop
-	for desktop in $(bspc query -D -m $SECOND_EXT_MONITOR)
-	do
-		bspc desktop $desktop --to-monitor $INT_MONITOR
-	done
-
-
-	# First External
+monitor_remove() {
+    # add temp desktop, cause bspwm monitors have to have min 1 desktop
 	bspc monitor $EXT_MONITOR -a Desktop
-	for desktop in $(bspc query -D -m $EXT_MONITOR)
-	do
+    # move all desktops except last to internal monitor
+	for desktop in $(bspc query -D -m $EXT_MONITOR); do
 		bspc desktop $desktop --to-monitor $INT_MONITOR
 	done
-
-	bspc monitor $EXT_MONITOR --remove
-	bspc monitor $SECOND_EXT_MONITOR --remove
-
+    
+    # remove ext monitor
+    bspc monitor $EXT_MONITOR --remove
+    # delete default desktop
 	bspc desktop Desktop --remove
   	bspc monitor $INT_MONITOR --reorder-desktops 1 2 3 4 5 6
 }
 
-#if [[ $(autorandr | grep "sillamae (detected)") ]]; then
-#	connect_double_external
-#el
-if [[ $(autorandr | grep "home (detected)") ]]; then
-	connect_external
+if [[ $(autorandr | grep "external (detected)") ]]; then
+    monitor_add
 else
-	remove_external
+    monitor_remove
 fi
+
 
 xwallpaper --zoom ~/.config/wall.png
 $HOME/.config/polybar/launch.sh

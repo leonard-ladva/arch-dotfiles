@@ -20,9 +20,9 @@ super + e
 ## quit bspwm
 super + alt + q
 	bspc quit
-## restart bspwm and polybar
+## restart bspwm 
 super + alt + r
-	bspc wm -r & $HOME/.config/polybar/launch.sh
+	bspc wm -r 
 ## close and kill
 super + {_,shift + }w
 	bspc node -{c,k}
@@ -94,6 +94,10 @@ XF86MonBrightnessUp
 ## Decrease Brightness
 XF86MonBrightnessDown
 	$HOME/.local/bin/changebrightness down
+  
+##
+XF86Display
+    arandr
 
 ## Change Keyboard Language
 alt + space

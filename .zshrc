@@ -60,5 +60,26 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #  
-export PATH=$PATH:'/home/leo/.local/bin'
-export BROWSER=firefox
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.pub-cache/bin
+
+## [GOLANG]
+## To develop go outside of $GOPATH/src
+export GO111MODULE=on
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+## [/GOLANG]
+
+## [Completion] 
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/leo/.dart-cli-completion/zsh-config.zsh ]] && . /home/leo/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+## [GCC]
+export PATH=$PATH:'/sbin/gcc'
+## [/GCC]
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/leo/google-cloud-sdk/path.zsh.inc' ]; then . '/home/leo/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/leo/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/leo/google-cloud-sdk/completion.zsh.inc'; fi
